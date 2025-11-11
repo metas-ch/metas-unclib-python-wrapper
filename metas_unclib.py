@@ -1,4 +1,4 @@
-# Michael Wollensack METAS - 22.01.2019 - 15.10.2025
+# Michael Wollensack METAS - 22.01.2019 - 11.11.2025
 
 import os as _os
 import sys as _sys
@@ -589,6 +589,12 @@ class umath(object):
         if (iscomplex(a) | iscomplexarray(a)):
             raise Exception("Input must be real")
         return _fromnetobject(_asnetobject(a).Erf())
+
+    @staticmethod
+    def inverf(a):
+        if (iscomplex(a) | iscomplexarray(a)):
+            raise Exception("Input must be real")
+        return _fromnetobject(_asnetobject(a).InvErf())
 
 
 class ulinalg(object):
